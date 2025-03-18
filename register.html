@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeSpace - Register</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="api/register.php" method="post">
+        <label>
+            Username:
+            <input minlength="3" pattern="[a-zA-Z0-9]+" title="Only letters or numbers" maxlength="20" type="text"
+                name="username" required>
+        </label>
+        <label>
+            Password:
+            <input type="password" name="password" required>
+        </label>
+        <button type="submit">register</button>
+    </form>
+</body>
+
+</html>
