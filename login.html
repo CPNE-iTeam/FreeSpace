@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeSpace - Login</title>
+    <script defer src="scripts/login.js"></script>
 </head>
 
 <body>
     <h1>Login</h1>
-    <form action="api/login.php" method="post">
-        <label>
+    <div>
+        <label> 
             Username:
-            <input type="text" name="username" required>
+            <input type="text" id="username" name="username" required>
         </label>
         <label>
             Password:
-            <input type="password" name="password" required>
+            <input type="password" id="password" name="password" required>
         </label>
-        <button type="submit">log me in</button>
-    </form>
+        <button onclick="login()">Log Me In</button>
+    </div>
 </body>
 
 </html>
