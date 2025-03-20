@@ -5,14 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeSpace</title>
+    <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
     <h1>FreeSpace</h1>
+    <div class="logged">
+        <h2 id="welcome"></h2>
+    </div>
+
     <nav>
         <ul>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
+            <div class="not-logged">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </div>
+
+            <div class="logged">
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </div>
         </ul>
     </nav>
 </body>

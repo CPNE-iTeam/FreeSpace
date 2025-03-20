@@ -10,7 +10,9 @@ if (!isset($_SESSION['user_id'])) {
 $db = new Database;
 $users = $db->select("SELECT * FROM users WHERE id = ?", [$_SESSION['user_id']]);
 $user = $users[0];
-
-echo json_encode(array("logged" => true, "user" => $user));
+$username = $user["username"];
+$banned = $user["banned"];
+$id = $user["id"];
+echo json_encode(array("logged" => true, "username" => $username, "banned" => $banned, "id" => $id));
 exit();
 ?>
