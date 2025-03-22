@@ -65,6 +65,7 @@ function loadMessages(user_id) {
 
 
 function loadChat(user_id) {
+    document.getElementById("messages").innerHTML = "";
     document.getElementById("chat").style.display = "block";
 
     let formData = new FormData();
