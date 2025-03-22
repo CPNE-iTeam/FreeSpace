@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeSpace - Register</title>
+    <script defer src="scripts/register.js"></script>
+</head>
+
+<body>
+    <h1>Register</h1>
+    <div>
+        <label>
+            Username:
+            <input id="username" minlength="3" pattern="[a-zA-Z0-9]+" title="Only letters or numbers" maxlength="20"
+                type="text" name="username" required>
+        </label>
+        <label>
+            Password:
+            <input id="password" type="password" name="password" required>
+        </label>
+        <button onclick="register()">register</button>
+    </div>
+</body>
+
+</html>
