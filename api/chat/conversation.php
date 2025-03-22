@@ -18,7 +18,8 @@ foreach ($messages as $message) {
     $result[] = array(
         "from_user" => $fromUser,
         "message" => $message["message"],
-        "date" => $message["date"]
+        "date" => $message["date"],
+        "id" => $message["id"]
     );
 }
 
