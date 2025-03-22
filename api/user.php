@@ -1,18 +1,26 @@
 <?php
+include_once(dirname(__FILE__) . "/../utils/database.php");
+
 session_start();
-include_once(dirname(__FILE__) . "/utils/database.php");
+
 
 if (!isset($_SESSION['user_id'])) {
-    echo json_encode(array("logged" => false));
+    echo json_encode(array("success" => false, "error" => "You are not logged in"));
     exit();
 }
 
+
 $db = new Database;
-$users = $db->select("SELECT * FROM users WHERE id = ?", [$_SESSION['user_id']]);
-$user = $users[0];
-$username = $user["username"];
-$banned = $user["banned"];
-$id = $user["id"];
-echo json_encode(array("logged" => true, "username" => $username, "banned" => $banned, "id" => $id));
-exit();
-?>
+
+if (isset($_GET["username"])){
+    $users = $db -> select("SELECT id, username, banned FROM users WHERE username = ?", [$_GET["username"]]);
+}elseif (isset($_GET["id"])){
+    $users = $db -> select("SELECT id, username, banned FROM users WHERE id = ?", [$_GET["id"]]);
+}
+
+if (count($users) == 0){
+    echo json_encode(array("success" => false, "error" => "User not found"));
+    exit();
+}
+
+echo json_encode(array("success" => true, "user" => $users[0]));
