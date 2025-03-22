@@ -41,4 +41,4 @@ function loadMessages() {
     });
 }
 
-loadMessages();
+setInterval(loadMessages, 1000);
