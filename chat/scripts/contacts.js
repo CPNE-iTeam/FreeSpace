@@ -30,6 +30,8 @@ function newChat() {
             alert(response.error);
         } else {
             loadChat(response.user.id);
+            document.getElementById("chat").style.display = "block";
+            document.getElementById("chatUsername").innerText = response.user.username;
         }
     });
 }

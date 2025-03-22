@@ -31,7 +31,6 @@ function send() {
 }
 
 function loadChat(user_id) {
-    document.getElementById("chat").style.display = "block";
     chat_user_id = user_id;
     let formData = new FormData();
     formData.append("contact", user_id);
