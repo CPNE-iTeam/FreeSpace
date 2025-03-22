@@ -16,6 +16,9 @@ $username = htmlspecialchars($_POST['username']);
 $password = $_POST['password'];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+if ($username == "aline"){echo json_encode(array("success" => false, "error" => "VITAL. JE SAIS QUE C'EST TOI."));exit();}
+
+
 $users = $db -> select("SELECT * FROM users WHERE username = ?", [$username]);
 if (count($users) > 0) {
     echo json_encode(array("success" => false, "error" => "Username already exists"));
