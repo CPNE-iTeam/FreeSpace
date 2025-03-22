@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeSpace : CHAT</title>
     <script src="scripts/chat.js" defer></script>
+    <script src="scripts/contacts.js" defer></script>
 </head>
 
 <body>
     <h1>FreeSpace : CHAT</h1>
-    <div>
+
+    <h2>My chats :</h2>
+    <label>
+        New chat :
+        <input id="newChat" type="text" placeholder="Enter username">
+        <button onclick="newChat()">Add</button>
+    </label>
+    <div id="contacts">
+        <ul>
+
+        </ul>
+    </div>
+
+    <div id="chat" style="display: none;">
         <div id="messages"></div>
         <input id="message" type="text" placeholder="messages">
         <button onclick="send()">SEND</button>

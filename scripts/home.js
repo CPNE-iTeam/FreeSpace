@@ -1,5 +1,5 @@
 
-fetch("api/user.php").then(async r => {
+fetch("api/me_user.php").then(async r => {
     let response = await r.json()
     console.log(response);
 

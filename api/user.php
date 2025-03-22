@@ -1,5 +1,6 @@
 <?php
-include_once(dirname(__FILE__) . "/../utils/database.php");
+error_reporting(E_ALL);
+include_once(dirname(__FILE__) . "/utils/database.php");
 
 session_start();
 
@@ -12,10 +13,10 @@ if (!isset($_SESSION['user_id'])) {
 
 $db = new Database;
 
-if (isset($_GET["username"])){
-    $users = $db -> select("SELECT id, username, banned FROM users WHERE username = ?", [$_GET["username"]]);
-}elseif (isset($_GET["id"])){
-    $users = $db -> select("SELECT id, username, banned FROM users WHERE id = ?", [$_GET["id"]]);
+if (isset($_POST["username"])){
+    $users = $db -> select("SELECT id, username, banned FROM users WHERE username = ?", [$_POST["username"]]);
+}elseif (isset($_POST["id"])){
+    $users = $db -> select("SELECT id, username, banned FROM users WHERE id = ?", [$_POST["id"]]);
 }
 
 if (count($users) == 0){
