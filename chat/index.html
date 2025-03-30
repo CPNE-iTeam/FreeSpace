@@ -2,21 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="icon" href="../image/icone.png" type="image/png">
     <title>FreeSpace : CHAT</title>
     <script src="scripts/chat.js" defer></script>
     <script src="scripts/contacts.js" defer></script>
 </head>
 
 <body>
-    <h1>FreeSpace : CHAT</h1>
+    <h1 class="title">FreeSpace : CHAT</h1>
 
-    <h2>My chats :</h2>
-    <label>
-        New chat :
-        <input id="newChat" type="text" placeholder="Enter username">
-        <button onclick="newChat()">Add</button>
+    <h2 class="title small">My chats :</h2>
+    <label class="log">
+        <p class="inputTxt">New chat :</p>
+        <input class="input chat" id="newChat" type="text" placeholder="Enter username">
+        <button class="link" onclick="newChat()">Add</button>
     </label>
     <div>
         <ul id="contacts">
@@ -24,11 +26,11 @@
         </ul>
     </div>
 
-    <div id="chat" style="display: none;">
-        <h2>Chat with @<label id="chatUsername"></label></h2>
+    <div class="log" id="chat" style="display: none;">
+        <p class="inputTxt">Chat with @<label id="chatUsername"></label></p>
         <div id="messages"></div>
-        <input id="message" type="text" placeholder="messages">
-        <button onclick="send()">SEND</button>
+        <input class="input chat" id="message" type="text" placeholder="messages">
+        <button class="link" onclick="send()">SEND</button>
     </div>
 </body>
 

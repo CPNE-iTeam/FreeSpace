@@ -26,7 +26,11 @@ body {
     font-family: 'TitleLogo', serif;
     text-decoration: underline;
     text-decoration-color: rgb(69, 15, 117);
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+}
+
+.small {
+    font-size: 3em;
 }
 
 .log {
@@ -70,4 +74,9 @@ body {
     text-align: left;
     margin-left: 120px;
     border-bottom: 1px solid white;
+    font-family: 'TitleLogo', serif;
+}
+
+.chat {
+    margin-left: 20px;
 }
