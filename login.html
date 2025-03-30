@@ -1,26 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="icon" href="image/icone.png" type="image/png">
+        <title>FreeSpace - Login</title>
+        <script defer src="scripts/login.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeSpace - Login</title>
-    <script defer src="scripts/login.js"></script>
-</head>
-
-<body>
-    <h1>Login</h1>
-    <div>
-        <label> 
-            Username:
-            <input type="text" id="username" name="username" required>
-        </label>
-        <label>
-            Password:
-            <input type="password" id="password" name="password" required>
-        </label>
-        <button onclick="login()">Log Me In</button>
-    </div>
-</body>
-
+    <body>
+        <h1 class="title">Login</h1>
+        <div>
+            <label class="log"> 
+                <p class="inputTxt">Username:</p>
+                <input class="input" type="text" id="username" name="username" required>
+            </label>
+            <label class="log">
+                <p class="inputTxt">Password:</p>
+                <input class="input" type="password" id="password" name="password" required>
+            </label>
+            <div class="log">
+                <button class="link" onclick="login()">Log Me In</button>
+            </div>
+        </div>
+    </body>
 </html>

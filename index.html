@@ -1,32 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="icon" href="image/icone.png" type="image/png">
+        <script src="scripts/home.js" defer></script>
+        <title>FreeSpace</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeSpace</title>
-    <script src="scripts/home.js" defer></script>
-</head>
+    <body>
+        <h1 class="title">FreeSpace</h1>
+        <div class="logged">
+            <h2 id="welcome"></h2>
+        </div>
 
-<body>
-    <h1>FreeSpace</h1>
-    <div class="logged">
-        <h2 id="welcome"></h2>
-    </div>
-
-    <nav>
-        <ul>
-            <div class="not-logged">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-            </div>
-
-            <div class="logged">
-                <li><a href="chat/">Chat</a></li>
-                <li><a href="#" onclick="logout()">Logout</a></li>
-            </div>
-        </ul>
-    </nav>
-</body>
-
+        <nav>
+            <ul>
+                <div class="log">
+                    <a class="link" href="login.html">Login</a>
+                </div>
+                <div class="log">
+                    <a class="link" href="register.html">Register</a>
+                </div>
+                <div class="log">
+                    <a class="link" href="chat/">Chat</a>
+                </div>
+                <div class="log">
+                    <a class="link" href="#" onclick="logout()">Logout</a>
+                </div>
+            </ul>
+        </nav>
+    </body>
 </html>

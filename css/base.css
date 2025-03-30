@@ -1,0 +1,73 @@
+* {
+    background-color: rgb(39, 39, 39);
+    color: rgb(209, 199, 199);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'TitleLogo';
+    src: url('../fonts/title-logo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Txt';
+    src: url('../fonts/txt.ttf') format('truetype');
+}
+
+body {
+    text-align: center;
+    margin: 20px;
+}
+
+.title {
+    font-size: 6em;
+    font-family: 'TitleLogo', serif;
+    text-decoration: underline;
+    text-decoration-color: rgb(69, 15, 117);
+    margin-bottom: 100px;
+}
+
+.log {
+    display: flex;
+    justify-self: center;
+    background-color: rgb(39, 39, 39);
+    border: 2px solid rgb(69, 15, 117);
+    border-radius: 17.5px;
+    padding: 40px;
+    width: 500px;
+    margin-bottom: 60px;
+    transition: 1.5s;
+}
+
+.log:hover {
+    scale: 1.1;
+}
+
+.link {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Txt', serif;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: 1.5s;
+    cursor: pointer;
+    border: none;
+}
+
+.link:hover {
+    letter-spacing: 5px;
+}
+
+.inputTxt {
+    font-family: 'Txt', serif;
+    font-size: 1.2em;
+}
+
+.input {
+    all: unset;
+    text-align: left;
+    margin-left: 120px;
+    border-bottom: 1px solid white;
+}
